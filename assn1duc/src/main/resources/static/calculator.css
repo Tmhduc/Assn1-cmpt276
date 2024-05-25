@@ -3,9 +3,9 @@ html{
     font-size: 100%;
 }
 .container{
-    background: rgba(44, 41, 41, 0.964);
+    background: rgba(67, 63, 63, 0.964);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .page{
     background: white;
@@ -23,7 +23,7 @@ body{
     padding-left: 20px;
 }
 .main{
-    background-color: rgb(234, 231, 231);
+    background-color: rgb(234, 234, 237);
     padding-top: 10px;
     padding-left: 7px;
     padding-bottom: 20px;
@@ -35,16 +35,44 @@ table{
     border-collapse: collapse;
     /* border: 1px solid black; */
 }
-th,td{
+.button {
+    text-size-adjust: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin: 20px 0 0;
+    cursor: pointer;
+    font-weight: 400;
+  }
+th{
     text-align: left;
     padding: 8px;
     border-spacing: 0;
     border: 1px solid black;
-    padding: 10px;
-}
-th{
     background-color: rgba(72, 44, 44, 0.126);
-
+}
+td{
+    text-align: left;
+    padding: 8px;
+    border: 1px solid rgb(122, 121, 121);
+    width: 20%;
+}
+.myResult{
+    color: rgb(194, 20, 20);
+    font-weight: bold;
+    font-size: 120%;
+    margin: -10px 0 0;
+}
+.button1{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: rgb(202, 16, 16);
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 4px 7px;
+    margin: 5px;
+    text-align: center;
 }
 #act{
     color: rgb(166, 16, 16)
