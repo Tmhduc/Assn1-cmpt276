@@ -32,13 +32,13 @@
                             <td>Activity 1</td>
                             <td>A1</td>
                             <td><form>
-                                <input type="text" class="weight-inline">
+                                <input type="text" id="weight1">
                             </form>
                             </td>
                             <td>
                                 <form action="" class="grade-inline">
-                                    <input type="text"> /
-                                    <input type="text">
+                                    <input type="text" id="num1"> /
+                                    <input type="text" id="denom1">
                                 </form>
                             </td>
                             <td></td>
@@ -47,26 +47,28 @@
                             <td>Activity 2</td>
                             <td>A2</td>
                             <td><form>
-                                <input type="text" id="weight-inline">
+                                <input type="text" id="weight2">
                             </form>
                             </td>
                             <td>
-                                <form action="" class="grade-inline">
-                                    <input type="text"> /
-                                    <input type="text">
+                                <form class="grade-inline">
+                                    <input type="text" id="num2"> /
+                                    <input type="text" id="denom2">
                                 </form>
                             </td> 
                             <td></td>
                         </tr>
                     </table>
-                <button onclick =  "addRow()" class="button" >ADD ROW</button>
+                <button id="addRow" class="button" >ADD ROW</button>
                 </section>
-                <section class='myResult'>
+                <section class='MyResult'>
                     <h4>Result</h4>
+                    <p id="myResult"></p>
                 </section>
                 <section class="footer">
-                    <button class="button1" onclick=weighted() >WEIGHTED</button>
-                    <button class="button1" onclick=mean()>MEAN</button>
+                    <button class="button1" id="weightedFunction" >WEIGHTED</button>
+                    <button class="button1" id="meanFunction">MEAN</button>
+                </section>
             </section>
         </div>
     </div>
