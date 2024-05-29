@@ -76,7 +76,7 @@ input{
     height: 25px;
 }
 .myResult{
-    color: rgb(194, 20, 20);
+    /* color: rgb(194, 20, 20); */
     font-weight: bold;
     font-size: 120%;
     margin: -10px 0 0;

@@ -37,11 +37,13 @@
                             </td>
                             <td>
                                 <form action="" class="grade-inline">
-                                    <input type="text" id="num1"> /
-                                    <input type="text" id="denom1">
+                                    <input type="text" name="grade1" id="num1"> /
+                                    <input type="text" name="grade1" id="denom1">
                                 </form>
                             </td>
-                            <td></td>
+                            <td>
+                                <p id="percentage1"></p>
+                            </td>
                         </tr>
                         <tr>
                             <td>Activity 2</td>
@@ -52,17 +54,19 @@
                             </td>
                             <td>
                                 <form class="grade-inline">
-                                    <input type="text" id="num2"> /
-                                    <input type="text" id="denom2">
+                                    <input type="text" name="grade2" id="num2"> /
+                                    <input type="text" name="grade2" id="denom2">
                                 </form>
                             </td> 
-                            <td></td>
+                            <td>
+                                <p id="percentage2"></p>
+                            </td>
                         </tr>
                     </table>
                 <button id="addRow" class="button" >ADD ROW</button>
                 </section>
                 <section class='MyResult'>
-                    <h4>Result</h4>
+                    <h4 id="ResultText">Result</h4>
                     <p id="myResult"></p>
                 </section>
                 <section class="footer">
