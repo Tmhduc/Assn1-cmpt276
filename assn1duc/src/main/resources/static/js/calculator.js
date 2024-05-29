@@ -10,24 +10,34 @@ function addRow(){
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
 
+    let len = (table.rows.length) -1;
     // Create the input boxes for the weight
     var weightbox = document.createElement('input');
     weightbox.setAttribute('type', 'text');
     weightbox.setAttribute('id', 'weight' + globalIndex);
+
     // Create the input boxes for the grade
     var formweight = document.createElement('form');
     var formgrade = document.createElement('form');
     formgrade.setAttribute('class', 'grade-inline');
+    formgrade.setAttribute('oninput', 'updatePercentage(' + len + ')');
+
     var gradeboxdenom = document.createElement('input');
     gradeboxdenom.setAttribute('type', 'text');
-    gradeboxdenom.setAttribute('name', 'grade' + globalIndex);
+    gradeboxdenom.setAttribute('name', 'grade' + len);
+    gradeboxdenom.setAttribute('id', 'denom' + len);
+    // gradeboxdenom.setAttribute('oninput', 'updatePercentage(' + len + ')');
+
+    // gradeboxdenom.oninput("updatePercentage(" + globalIndex + ")");
 
     var gradeboxnum = document.createElement('input');
     gradeboxnum.setAttribute('type', 'text');
-    gradeboxnum.setAttribute('name', 'grade' + globalIndex);
-
+    gradeboxnum.setAttribute('name', 'grade' + len);
+    gradeboxnum.setAttribute('id', 'num' + len);
+    
     var percentageBox = document.createElement('p');
     percentageBox.setAttribute('id', 'percentage' + globalIndex);
+
 
     // Set the values of the cells
     cell1.innerHTML = "Activity " + globalIndex;
