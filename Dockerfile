@@ -1,8 +1,7 @@
-FROM maven:3.8.3-openjdk-17 AS build
+FROM maven:3.8.4-openjdk-17 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/assn1duc-0.0.1-SNAPSHOT.jar assn1duc.jar
-EXPOSE 8080
-ENTRYPOINT [ "java","-jar","assn1duc.jar"]
+FROM eclipse-temurin:21
+COPY --from=build /target/asn1-0.0.1-SNAPSHOT.jar /opt/app/assn1duc.jar
+CMD ["java", "-jar", "/opt/app/assn1duc.jar"]
