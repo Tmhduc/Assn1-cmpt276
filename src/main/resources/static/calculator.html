@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="/style/calculator.css">
+</head>
+<body class="widebody">
+    <div class="container">
+        <div class="page">
+            <section class="title-section">
+                <div>
+                    <h2>Grade Calculator</h2>
+                </div>
+            </section>
+            <section class="main">
+                <section class="header">
+                    <h4 id="act">Activities</h4>
+                    <p id="grade-text">Give grades to the numeric activites</p>
+                </section>
+                <section class="tables" >
+                    <table id="myTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Short Name</th>
+                            <th>Weight</th>
+                            <th>Grade</th>
+                            <th>Percent</th>
+                        </tr>
+                        <tr>
+                            <td>Activity 1</td>
+                            <td>A1</td>
+                            <td><form>
+                                <input type="text" id="weight1">
+                            </form>
+                            </td>
+                            <td>
+                                <form action="" class="grade-inline" oninput="updatePercentage(1)">
+                                    <input type="text" name="grade1" id="num1"> /
+                                    <input type="text" name="grade1" id="denom1">
+                                </form>
+                            </td>
+                            <td>
+                                <p id="percentage1"></p>
+                            </td>
+                        </tr>
+                    </table>
+                <button id="addRow" class="button" >ADD ROW</button>
+                </section>
+                <section class='MyResult'>
+                    <h4 id="ResultText">Result</h4>
+                    <p id="myResult"></p>
+                </section>
+                <section class="footer">
+                    <button class="button1" id="weightedFunction" >WEIGHTED</button>
+                    <button class="button1" id="meanFunction">MEAN</button>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
