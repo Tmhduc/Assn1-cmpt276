@@ -11,36 +11,40 @@ html{
     padding-top: 15px;
     padding-bottom: 30px;
 }
+
 .page{
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* width: 100%; */
     background: white;
-    padding-bottom: 5px;
+
     padding: 20px;
     /* box-shadow: 0 0 15px rgba(50, 50, 50, 0.75) ; */
+}
+.title-section{
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: large;
+
 }
 body{
     background-color: rgba(188, 24, 24, 0.893);
     font-family: "DINWebBold", sans-serif;
     font-size: 100%;
 }
-.title{
-    padding-top: 20px;
-    padding-left: 20px;
-}
 .main{
-    background-color: rgb(234, 234, 237);
+    background-color: #E9EFF1;
     padding-top: 10px;
-    padding-left: 7px;
+    padding-left: 12px;
     padding-bottom: 20px;
-    padding-right: 7px;
+    padding-right: 12px;
     width: 80%;
     margin: 20px;
 }
 table{
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-collapse: collapse;
-    /* border: 1px solid black; */
+    /* border: 1px solid rgb(196, 193, 193); */
 }
 .footer{
     text-align: right;
@@ -50,9 +54,10 @@ table{
     text-align: center;
     display: inline-block;
     font-size: 12px;
-    margin: 20px 0 0;
+    margin: 15px 0 0;
     font-weight: 400;
     border-radius: 3px;
+    border-width: 1px;
 }
 .button:hover {
     transition: 0.001s ease-in;
@@ -62,13 +67,13 @@ th{
     text-align: left;
     padding: 8px;
     border-spacing: 0;
-    border: 1px solid black;
+    border: 1px solid rgb(144, 140, 140);
     background-color: rgba(72, 44, 44, 0.126);
 }
 td{
     text-align: left;
     padding: 7px;
-    border: 1px solid rgb(122, 121, 121);
+    border: 1px solid rgb(144, 140, 140);
     width: 20%;
 }
 input{
@@ -96,11 +101,20 @@ input{
     background-color: rgb(212, 16, 16);
 }
 #act{
-    color: rgb(166, 16, 16)
+    color: rgb(166, 16, 16);
+    font-size: large;
 }
 #myTable{
     width: 100%;
 }
 #meanFunction, #weightedFunction{
     width: 5.3rem;
+}
+#ResultText{
+    color: rgba(174, 20, 20, 0.893);
+    font-size: large;
+}
+#grade-text{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

@@ -1,4 +1,3 @@
-let globalIndex = 3; // global variable to keep track of the index of the activity
 document.getElementById("addRow").onclick = function() {addRow()};
 
 function addRow(){
@@ -10,11 +9,11 @@ function addRow(){
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
 
-    let len = (table.rows.length) -1;
+    let len = (table.rows.length)-1;
     // Create the input boxes for the weight
     var weightbox = document.createElement('input');
     weightbox.setAttribute('type', 'text');
-    weightbox.setAttribute('id', 'weight' + globalIndex);
+    weightbox.setAttribute('id', 'weight' + len);
 
     // Create the input boxes for the grade
     var formweight = document.createElement('form');
@@ -26,9 +25,6 @@ function addRow(){
     gradeboxdenom.setAttribute('type', 'text');
     gradeboxdenom.setAttribute('name', 'grade' + len);
     gradeboxdenom.setAttribute('id', 'denom' + len);
-    // gradeboxdenom.setAttribute('oninput', 'updatePercentage(' + len + ')');
-
-    // gradeboxdenom.oninput("updatePercentage(" + globalIndex + ")");
 
     var gradeboxnum = document.createElement('input');
     gradeboxnum.setAttribute('type', 'text');
@@ -36,12 +32,12 @@ function addRow(){
     gradeboxnum.setAttribute('id', 'num' + len);
     
     var percentageBox = document.createElement('p');
-    percentageBox.setAttribute('id', 'percentage' + globalIndex);
+    percentageBox.setAttribute('id', 'percentage' + len);
 
 
     // Set the values of the cells
-    cell1.innerHTML = "Activity " + globalIndex;
-    cell2.innerHTML = "A" + globalIndex;
+    cell1.innerHTML = "Activity " + len;
+    cell2.innerHTML = "A" + len;
     formweight.appendChild(weightbox);
     cell3.appendChild(formweight);
     formgrade.appendChild(gradeboxnum);
@@ -50,14 +46,7 @@ function addRow(){
     cell4.appendChild(formgrade);
     cell5.appendChild(percentageBox);
 
-    // gradeboxnum.addEventListener("input", function() { updatePercentage(1); });
-    // gradeboxdenom.addEventListener("input", function() { updatePercentage(1); });
-
-    globalIndex++;
 }
-
-
-// let weightIndex = 1;
 
 // Define the function to calculate the weighted average
 document.getElementById("weightedFunction").onclick = function() {calculateWeight()};
@@ -97,26 +86,6 @@ function calculateWeight(){
     finalPercent = Math.round(finalGrade * 100) / 100;
     document.getElementById("myResult").innerHTML = "Your final grade is: " + finalGrade + " (" + (finalPercent * 100) + "/100)";
 }
-
-
-// let table = document.getElementById("myTable");
-// let numActivities = table.rows.length;
-// for( let i = 1; i < numActivities; i++){
-//     let element = document.getElementById("grade" + i);
-//     element.addEventListener("input", function() {
-//         let numerator = document.getElementById("num" + i);
-//         let denominator = document.getElementById("denom" + i);
-//         numerator.addEventListener("input", printPercentage(numerator, denominator, i));
-//         denominator.addEventListener("input", printPercentage(numerator, denominator, i));
-//     });
-// }
-
-// function printPercentage(numerator, denominator, i){
-//     while(numerator != "" && denominator != "" && isNaN(numerator) == false && isNaN(denominator) == false){
-//         let percentage = (parseInt(numerator) / parseInt(denominator)) * 100;
-//         document.getElementById("percentage" + (i)).innerHTML = percentage + "%";
-//     }
-// }
 
 function updatePercentage(index) {
     let numerator = document.getElementById("num" + index).value;

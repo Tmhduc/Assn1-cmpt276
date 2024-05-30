@@ -9,7 +9,7 @@
 <body class="widebody">
     <div class="container">
         <div class="page">
-            <section class="title section">
+            <section class="title-section">
                 <div>
                     <h2>Grade Calculator</h2>
                 </div>
@@ -17,7 +17,7 @@
             <section class="main">
                 <section class="header">
                     <h4 id="act">Activities</h4>
-                    <p>Give grades to the numeric activites</p>
+                    <p id="grade-text">Give grades to the numeric activites</p>
                 </section>
                 <section class="tables" >
                     <table id="myTable">
@@ -43,23 +43,6 @@
                             </td>
                             <td>
                                 <p id="percentage1"></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Activity 2</td>
-                            <td>A2</td>
-                            <td><form>
-                                <input type="text" id="weight2">
-                            </form>
-                            </td>
-                            <td>
-                                <form class="grade-inline" oninput="updatePercentage(2)">
-                                    <input type="text" name="grade2" id="num2"> /
-                                    <input type="text" name="grade2" id="denom2">
-                                </form>
-                            </td> 
-                            <td>
-                                <p id="percentage2"></p>
                             </td>
                         </tr>
                     </table>
